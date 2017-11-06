@@ -10,11 +10,12 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
+  console.log('activate...');
   clients.claim();
-  console.log('Now ready to handle fetches!');
 });
 
 self.addEventListener('fetch', event => {
+  console.log('fetch...');
   const url = new URL(event.request.url);
 
   // Images from https://openclipart.org
