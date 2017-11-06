@@ -3,9 +3,7 @@ const expectedCaches = ['skip-waiting'];
 self.addEventListener('install', event => {
   console.log('installing...');
   
-  self.skipWaiting();
-  event.waitUntil(clients.claim());
-  
+  self.skipWaiting();  
   event.waitUntil(
     caches.open('skip-waiting').then(cache => cache.add('crazyman.svg'))
   );
