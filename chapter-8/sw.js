@@ -35,8 +35,8 @@ function timeout(delay) {
 self.addEventListener('fetch', function(event) {
 
   // Check for the googleapis domain
-  if (/fonts/.test(event.request.url)) {
-    return event.respondWith(Promise.race([timeout(10),fetch(event.request.url)]));
+  if (/ben/.test(event.request.url)) {
+    return event.respondWith(Promise.race([timeout(3000),fetch(event.request.url)]));
   }
 
   // Else process all other requests as expected
