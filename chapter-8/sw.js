@@ -2,6 +2,7 @@ const cacheName = 'latestNews-v1';
 const offlineUrl = 'offline-page.html';
 
 // Cache our known resources during install
+/*
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
@@ -18,6 +19,7 @@ self.addEventListener('install', event => {
     ]))
   );
 });
+*/
 
 function timeout(delay) {
   return new Promise(function (resolve, reject) {
