@@ -2,12 +2,12 @@ const expectedCaches = ['skip-waiting'];
 
 self.addEventListener('install', event => {
   console.log('installing...');
-  event.waitUntil(self.skipWaiting());
+  //event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener('activate', event => {
   console.log('activate...');
-  event.waitUntil(self.clients.claim());
+  //event.waitUntil(self.clients.claim());
 });
 
 self.addEventListener('fetch', function(event) {
