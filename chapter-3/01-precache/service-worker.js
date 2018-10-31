@@ -15,6 +15,7 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request)
     .then(function(response) {
       if (response) {
+      	console.log('Cache used for ressource: '+event.request.url);
         return response;
       }
       return fetch(event.request);
