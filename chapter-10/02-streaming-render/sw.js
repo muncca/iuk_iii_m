@@ -88,7 +88,7 @@ function streamArticle(url) {
 }
 
 // Get the value from the querystring
-function getQueryString ( field, url = window.location.href ) {
+function getQueryString ( field, url) {
     var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
     var string = reg.exec(url);
     return string ? string[1] : null;
@@ -102,7 +102,7 @@ self.addEventListener('fetch', function (event) {
   if (url.pathname.endsWith('/article.html')) {
 
     // Get the ID of the article
-    const articleId = getQueryString('id');
+    const articleId = getQueryString('id', url.search);
 
     // Get the URL of the article
     const articleUrl = `data-${articleId}`;
